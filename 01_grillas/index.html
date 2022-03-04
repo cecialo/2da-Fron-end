@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Hello Bootstrap</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .bd-highlight {
+        background-color: rgba(86, 61, 124, 0.15);
+        border: 1px solid rgba(86, 61, 124, 0.15);
+      }
+
+      .h-25 {
+        height: 25vh !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!--CONTENIDO-->
+
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-12 col-sm-6 col-md-4 col-xl-3 bg-red"
+        >
+          Column 1
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 col-xl-3 bg-warning"
+        >
+          Column 2
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 col-xl-3 bg-green"
+        >
+          Column 3
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 col-xl-3 bg-info"
+        >
+          Column 4
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-3 bg-red">Column 1</div>
+        <div class="col-3 bg-warning">Column 2</div>
+        <div class="col-6 bg-green">
+          <div class="row">
+            <div class="col-4 bg-info">Column3 - A</div>
+            <div class="col-6 bg-primary">Column3 - B</div>
+            <div class="col-2 bg-success">Column3 - C</div>
+          </div>
+          <div class="row">
+            <div class="col-6 bg-secondary">
+              Column3 - A
+            </div>
+            <div class="col-2 bg-purple">Column3 - B</div>
+            <div class="col-4 bg-green">Column3 - C</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FLEXBOX  (HABILITAR FLEX)-->
+
+    <div class="d-flex border bd-highlight p-2">
+      I'm flex-box container
+    </div>
+
+    <div class="d-inline-flex border bd-highlight p-2">
+      I'm flex-box container
+    </div>
+
+    <!--DIRECCIÓN  (ROW & COLUMN)-->
+
+    <div class="d-flex border bd-highlight p-2 flex-column">
+      <article class="bd-highlight">Article A</article>
+      <article class="bd-highlight">Article B</article>
+      <article class="bd-highlight">Article C</article>
+    </div>
+
+    <div class="d-flex border bd-highlight p-2 flex-row">
+      <article class="bd-highlight">Article A</article>
+      <article class="bd-highlight">Article B</article>
+      <article class="bd-highlight">Article C</article>
+    </div>
+
+    <div
+      class="d-flex border bd-highlight p-2 flex-column-reverse"
+    >
+      <article class="bd-highlight">Article A</article>
+      <article class="bd-highlight">Article B</article>
+      <article class="bd-highlight">Article C</article>
+    </div>
+
+    <div
+      class="d-flex border bd-highlight p-2 flex-row-reverse"
+    >
+      <article class="bd-highlight">Article A</article>
+      <article class="bd-highlight">Article B</article>
+      <article class="bd-highlight">Article C</article>
+    </div>
+
+    <div
+      class="d-flex border bd-highlight p-2 flex-column flex-sm-row"
+    >
+      <div class="bd-highlight">Article A</div>
+      <div class="bd-highlight">Article B</div>
+      <div class="bd-highlight">Article C</div>
+    </div>
+
+    <!--ALINEACION EJE PRINCIPAL-->
+
+    <div
+      class="d-flex border bd-highlight p-2 flex-row justify-content-between h-25"
+    >
+      <div class="bd-highlight">Article A</div>
+      <div class="bd-highlight">Article B</div>
+      <div class="bd-highlight">Article C</div>
+    </div>
+    <br />
+    <div
+      class="d-flex border bd-highlight p-2 flex-column justify-content-evenly h-25"
+    >
+      <div class="bd-highlight">Article A</div>
+      <div class="bd-highlight">Article B</div>
+      <div class="bd-highlight">Article C</div>
+    </div>
+
+    <div
+      class="d-flex border bd-highlight p-2 flex-row justify-content-between align-items-end h-25"
+    >
+      <div class="bd-highlight">Article A</div>
+      <div class="bd-highlight">Article B</div>
+      <div class="bd-highlight">Article C</div>
+    </div>
+    <br />
+    <div
+      class="d-flex border bd-highlight p-2 flex-column justify-content-evenly align-items-start h-25"
+    >
+      <div class="bd-highlight">Article A</div>
+      <div class="bd-highlight">Article B</div>
+      <div class="bd-highlight">Article C</div>
+    </div>
+
+    <div
+      class="d-flex border bd-highlight p-2 flex-row justify-content-between align-items-end h-25"
+    >
+      <div class="bd-highlight">Article A</div>
+      <div class="bd-highlight align-self-start">
+        Article B
+      </div>
+      <div class="bd-highlight align-self-center">
+        Article C
+      </div>
+    </div>
+    <br />
+    <div
+      class="d-flex border bd-highlight p-2 flex-column justify-content-evenly align-items-start h-25"
+    >
+      <div class="bd-highlight">Article A</div>
+      <div class="bd-highlight align-self-end">
+        Article B
+      </div>
+      <div class="bd-highlight align-self-center">
+        Article C
+      </div>
+    </div>
+
+    <!--CRECIMIENTO & DECRECIMIENTO  (ROW & COLUMN)-->
+
+    <div class="d-flex bd-highlight">
+      <div class="p-2 flex-grow-1 bd-highlight">
+        Flex item
+      </div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Third flex item</div>
+    </div>
+
+    <div class="d-flex bd-highlight">
+      <div class="p-2 w-100 bd-highlight">Flex item</div>
+      <div class="p-2 flex-shrink-1 bd-highlight">
+        Flex item
+      </div>
+    </div>
+
+    <div class="d-flex bd-highlight flex-wrap">
+      <div class="bd-highlight">Item1</div>
+      <div class="bd-highlight">Item2</div>
+      <div class="bd-highlight">Item3</div>
+      <div class="bd-highlight">Item3</div>
+      <div class="bd-highlight">Item3</div>
+      <div class="bd-highlight">Item3</div>
+      <div class="bd-highlight">Item3</div>
+      <div class="bd-highlight">Item3</div>
+      <div class="bd-highlight">Item3</div>
+      <div class="bd-highlight">Item3</div>
+      <div class="bd-highlight">Item3</div>
+      <div class="bd-highlight">Item3</div>
+      <div class="bd-highlight">Item3</div>
+    </div>
+
+    <!--TABLAS-->
+
+    <table
+      class="table table-light table-striped table-hover table-bordered"
+    >
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+      <tfoot class="table-dark">
+        <tr>
+          <th>Foot</th>
+          <td>Foot</td>
+          <td>Foot</td>
+          <td>Foot</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

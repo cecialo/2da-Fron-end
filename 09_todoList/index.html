@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Hola soy el titulo de la pagina</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        
+       <div id="app">
+            <h1 v-bind:title="message" >Todo List</h1>
+            <span v-if="seen">Ahora me ves</span>
+
+            <input type="text" v-model="newTask"/>
+    
+            <button v-on:click="addTask">Agregar</button>
+            <ul>
+                <todo-item v-for="task in tasks" v-bind:task="task">
+                </todo-item>
+            </ul>
+            <span>{{ tasks.length }}</span>
+        </div>
+
+
+        <script>
+            Vue.component('todo-item', {
+                props: ['task'],
+                template:  `
+                        <li>
+                            <input type="checkbox" v-model="task.done"/>
+                            <span v-if= "task.done">
+                                <s>{{task.text}}</s>
+                            </span>
+                            <span v-else>
+                                {{task.text}} 
+                            </span>
+                        </li>
+                    `,
+            })
+        </script>
+        
+        <script>
+        		var app = new Vue({
+              el: "#app",
+
+              data: {
+                  message: "Ahora: " + new Date(),
+                  seen: false,
+                  tasks: [],
+                  newTask: "Nueva tarea"
+              },
+              created: function() {
+                  if ( localStorage.getItem("tasks") === null ) {
+                      this.tasks = []
+                  } else {
+                      this.tasks = JSON.parse(localStorage.getItem("tasks"))
+                  }
+              },
+              methods: {
+                  addTask: function() {
+                      this.tasks.push({"text": this.newTask})
+                      localStorage.setItem("tasks", JSON.stringify(this.tasks))
+                  }
+              }
+          })
+        </script>
+    </body>
+</html>
